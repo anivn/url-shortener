@@ -3,6 +3,7 @@
 
 <head>
   <title>Ani-vn.com | Rút gọn link</title>
+  <link rel="shortcut icon" href="http://www.ani-vn.com/favicon.ico" type="image/x-icon">
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -10,21 +11,21 @@
       enable_page_level_ads: true
     });
   </script>
-  <meta name="image" content="https://emojipedia-us.s3.amazonaws.com/cache/52/23/52230e8ab5779d3b28c53725672bad99.png">
+  <meta name="image" content="http://farm5.staticflickr.com/4394/37084168360_099b90e804_o.png">
   <link rel="icon" href="/static/favicon.ico">
   <!-- Schema.org for Google -->
   <meta itemprop="name" content="Ani-vn.com | Rút gọn link">
   <meta itemprop="description" content="Ani-vn.com | Rút gọn link">
-  <meta itemprop="image" content="https://emojipedia-us.s3.amazonaws.com/cache/52/23/52230e8ab5779d3b28c53725672bad99.png">
+  <meta itemprop="image" content="http://farm5.staticflickr.com/4394/37084168360_099b90e804_o.png">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ani-vn.com | Rút gọn link">
-  <meta name="twitter:description" content="Shitty url shortener, emoji and ai powered.">
-  <meta name="twitter:site" content="@cagataycali">
-  <meta name="twitter:creator" content="@cagataycali">
+  <meta name="twitter:description" content="Ani-vn.com">
+  <meta name="twitter:site" content="@Ani-vn.com">
+  <meta name="twitter:creator" content="@Ani-vn.com">
   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-  <meta name="og:title" content="Ani-vn.com | Rút gọn link">
-  <meta name="og:description" content="Shitty url shortener, emoji and ai powered.">
+  <meta name="og:title" content="Ani-vn.com">
+  <meta name="og:description" content="Ani-vn.com | Rút gọn link">
   <meta name="og:image" content="https://emojipedia-us.s3.amazonaws.com/cache/52/23/52230e8ab5779d3b28c53725672bad99.png">
   <meta name="og:url" content="Ani-vn.com">
   <meta name="og:site_name" content="Ani-vn.com | Rút gọn link">
@@ -42,9 +43,9 @@
 </head>
 
 <body class="text-center" style="margin-top: 50px;">
-  <p>Home, sweet home... 🏡</p>
-  <p>I guess you have a shitty URL. That's why you're here. 💩</p>
-  <p>Let's see what I can do.</p>
+  <p>Chào bạn ! </p>
+  <p>Nhập link cần rút gọn vào ô bên dưới ^^!</p>
+  <p>Sau đó chọn biểu tượng mà bạn thích.</p>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-10">
@@ -57,15 +58,11 @@
           </p>
         </div>
         <div id="cool" class="jumbotron" style="display:none">
-          <h1>There's your cool shortened URL!</h1>
+          <h1>Link đã được rút gọn!</h1>
           <h4 id="cool-url"></h4>
           <h4 id="cool-stats"></h4>
           <!-- <h4 id="cool-subdomain"> </h4> -->
-          <a class="btn btn-secondary" href="https://github.com/cagataycali/url-shortener" target="_blank">
-              Could you can give me star on GitHub? <i class="fa fa-lg fa-github"></i>
-            </a>
         </div>
-
         <button id="check" class="btn btn-primary btn-lg btn-block">
             Check! <i class="fa fa-hand-spock-o"></i>
           </button>
@@ -77,14 +74,11 @@
   </div>
 
   <br>
-  <p>No reporting, no follow-up. It just works. </p>
+  <p>Ani-vn.com</p>
 
-  <p>The world is ours, become a contributor. 🌍✌🏼</p>
+  <p>Copyright (c) cagataycali</p>
 
   <p>
-    <a class="btn btn-secondary" href="https://github.com/cagataycali/url-shortener" target="_blank">
-        View on GitHub <i class="fa fa-lg fa-github"></i>
-      </a>
   </p>
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -119,7 +113,7 @@
         }).show()
       } else {
         new Noty({
-          text: 'Grr grr grr, generating your awesome emojis.',
+          text: 'Chọn biểu tượng cho link của bạn !',
           type: 'info',
           theme: 'nest',
           force: true,
@@ -134,7 +128,7 @@
       var emoji = $('#emoji');
       if (emoji.val().trim().length === 0 || url.val().trim().length === 0) {
         new Noty({
-          text: `Choose one or more emoji`,
+          text: `Chọn một hoặc nhiều biểu tượng`,
           type: 'warning',
           theme: 'nest',
           force: true,
@@ -202,7 +196,7 @@
         $('#grab').show('slow');
         $('#check').hide('slow');
         new Noty({
-          text: `I think this emojis fits your url. <br> Even you can choose emoji! <br> Or you can use only text 😘`,
+          text: `Bạn có thể sử dụng biểu tượng hoặc văn bản.`,
           type: 'info',
           theme: 'nest',
           force: true,
