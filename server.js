@@ -102,9 +102,9 @@ app.post('/', async (req, res) => {
 
      keys.save((err, doc) => {
        if (err) {
-         res.json({status:false, message: 'Somebody grabbed your emoji or you already shortened your url.'})
+         res.json({status:false, message: 'Đã trùng với một người nào đó.'})
        } else {
-         io.sockets.emit('new', `${emoji} grabbed by ${url} now.`)
+         io.sockets.emit('new', `${emoji} đã gán cho ${url} `)
          res.json({status:true, url: `http://${punycode.toUnicode(req.headers.host)}/${emoji}`, subdomain: `http://${emoji}.${punycode.toUnicode(req.headers.host)}`, friendly: `http://coool.ws/${emoji}`, stats:`http://${punycode.toUnicode(req.headers.host)}/stats/${emoji}`})
        }
      });
