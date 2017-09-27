@@ -49,7 +49,7 @@ app.get('/check/:key', async (req, res) => {
       response.message = `Aww, ${res.url} grabbed it first!`
       res.json(response);
   } catch (e) {
-      res.json('Available for purchase! Haha, It\'s joke. But contributions is welcome.')
+      res.json('Bạn cần coppy đường link và dán lên trình duyệt thì link mới hoạt động.')
   }
 });
 
@@ -60,7 +60,7 @@ app.get('/subdomain/:key/', async (req, res) => {
     console.log('REDIRECT', response);
     res.redirect(301, response.url);
   } catch (e) {
-    res.json({message:'Available for purchase! Haha, It\'s joke. But contributions is welcome.'});
+    res.json({message:'Bạn cần coppy đường link và dán lên trình duyệt thì link mới hoạt động.'});
   }
 });
 
@@ -81,7 +81,7 @@ app.get('/:key', async (req, res) => {
       key.save();
       res.redirect(301, key.url);
     } else {
-      res.json({message:'Available for purchase! Haha, It\'s joke. But contributions is welcome.'});
+      res.json({message:'Bạn cần coppy đường link và dán lên trình duyệt thì link mới hoạt động.'});
     }
   });
 })
@@ -109,7 +109,7 @@ app.post('/', async (req, res) => {
        }
      });
  } else {
-   res.json({status:false, message: 'Gimme valid url.'})
+   res.json({status:false, message: 'Vui lòng nhập đúng định dạng.'})
  }
 });
 
@@ -122,7 +122,7 @@ io.on('connection', (socket) => {
       console.log(response, url);
       io.to(socket.id).emit('emojis', {status:true, response})
    } else {
-     io.to(socket.id).emit('emojis', {status:false, response:'Gimme valid url.'})
+     io.to(socket.id).emit('emojis', {status:false, response:'Vui lòng nhập đúng định dạng.'})
    }
   });
 });
