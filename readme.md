@@ -1,8 +1,6 @@
 ### Shitty url shortener, emoji powered.
 
-* [🌍✌🏼.ws](http://🌍✌🏼.ws)
-* [👎👍.ws](http://👎👍.ws/)
-* [coool.ws](http://coool.ws/)
+* [url.ani-vn.com](http://url.ani-vn.com/)
 
 ![url-shortener](public/readme.png)
 
